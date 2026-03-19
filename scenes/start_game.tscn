@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c5tbn804captn"]
+
+[ext_resource type="StyleBox" uid="uid://cr4g42uug7h5g" path="res://styles/new_style_box_flat.tres" id="1_c75kr"]
+
+[node name="StartGame" type="Node2D" unique_id=783476528]
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=309582494]
+offset_right = 994.0
+offset_bottom = 998.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1035364437]
+layout_mode = 2
+theme_override_constants/separation = 200
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=1324586589]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Rock" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=933670394]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("1_c75kr")
+text = "Rock"
+
+[node name="Paper" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=469238090]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("1_c75kr")
+text = "Paper"
+
+[node name="Scissor" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=1607336106]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("1_c75kr")
+text = "Scissor"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=1164499846]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="AI" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=573582197]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("1_c75kr")
+text = "ROCK"
