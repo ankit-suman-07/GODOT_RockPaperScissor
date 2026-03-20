@@ -143,5 +143,18 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_c75kr")
 text = "Restart"
 
+[node name="RoundSelections" type="RichTextLabel" parent="." unique_id=2145261007]
+offset_left = 1.0
+offset_top = 684.0
+offset_right = 999.0
+offset_bottom = 777.0
+theme_override_font_sizes/normal_font_size = 24
+text = "ROCK x PAPER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Rock" to="." method="_on_rock_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Paper" to="." method="_on_paper_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Scissor" to="." method="_on_scissor_pressed"]
 [connection signal="pressed" from="ExitBtn" to="." method="_on_exit_btn_pressed"]
 [connection signal="pressed" from="RestartBtn" to="." method="_on_restart_btn_pressed"]
