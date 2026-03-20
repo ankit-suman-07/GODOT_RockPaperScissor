@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://ctlqc6sc1bs3x"]
 
+[ext_resource type="Script" uid="uid://dflgp1ccq5j35" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
 [node name="MainMenu" type="Node2D" unique_id=1382899956]
+script = ExtResource("1_l6cm7")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1312167831]
 offset_right = 994.0
@@ -23,3 +26,6 @@ text = "Play Game"
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 text = "Quit"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartBtn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/ExitBtn" to="." method="_on_exit_btn_pressed"]

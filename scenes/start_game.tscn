@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c5tbn804captn"]
 
 [ext_resource type="StyleBox" uid="uid://cr4g42uug7h5g" path="res://styles/new_style_box_flat.tres" id="1_c75kr"]
+[ext_resource type="Script" uid="uid://dclr343nxr2wa" path="res://scripts/start_game.gd" id="1_tq2sd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c75kr"]
 bg_color = Color(0.0361009, 0.036100917, 0.036100868, 1)
@@ -14,6 +15,7 @@ expand_margin_right = 15.0
 expand_margin_bottom = 15.0
 
 [node name="StartGame" type="Node2D" unique_id=783476528]
+script = ExtResource("1_tq2sd")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=309582494]
 offset_right = 994.0
@@ -140,3 +142,6 @@ offset_bottom = 75.0
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_c75kr")
 text = "Restart"
+
+[connection signal="pressed" from="ExitBtn" to="." method="_on_exit_btn_pressed"]
+[connection signal="pressed" from="RestartBtn" to="." method="_on_restart_btn_pressed"]
