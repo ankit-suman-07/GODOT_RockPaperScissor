@@ -4,10 +4,10 @@ extends Node2D
 @onready var player_score = $PlayerScoreValue
 @onready var computer_score = $ComputerScoreValue 
 @onready var computer_btn = $CenterContainer/HBoxContainer/VBoxContainer2/AI
-@onready var round_result = $"Winner Label"
-@onready var winner_label = $WinnerLabel
+@onready var round_result = $"WinnerLabel"
+@onready var winner_label = $RoundResult
 
-const AI_OPTIONS = ["ROCK", "PAPER", "SCISSOR"]
+const AI_OPTIONS = ["ROCK", "PAPER", "SCISSOR", "PAPER", "SCISSOR", "ROCK", "SCISSOR", "ROCK", "PAPER"]
 var round = 5
 var player_score_value = 0
 var computer_score_value = 0
@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 	pass
 
 func select_round_winner(player_selected):
-	var probabilities = [1, 1, 1];
+	var probabilities = [1, 1, 1, 1, 1, 1, 1, 1, 1];
 	var random = RandomNumberGenerator.new()
 	var ai_selected = AI_OPTIONS[random.rand_weighted(probabilities)]
 	
