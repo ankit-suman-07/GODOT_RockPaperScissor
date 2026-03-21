@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ctlqc6sc1bs3x"]
 
 [ext_resource type="Script" uid="uid://dflgp1ccq5j35" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://cgbvqalpfog4q" path="res://assets/Pixel Game.otf" id="2_ekxnf"]
 
 [node name="MainMenu" type="Node2D" unique_id=1382899956]
 script = ExtResource("1_l6cm7")
@@ -14,8 +15,9 @@ layout_mode = 2
 
 [node name="GameName" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1466924033]
 layout_mode = 2
-theme_override_font_sizes/font_size = 48
-text = "RockPaperScissor"
+theme_override_fonts/font = ExtResource("2_ekxnf")
+theme_override_font_sizes/font_size = 64
+text = "Rock-Paper-Scissor"
 
 [node name="StartBtn" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1614608226]
 layout_mode = 2

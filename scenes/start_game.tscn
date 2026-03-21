@@ -2,6 +2,7 @@
 
 [ext_resource type="StyleBox" uid="uid://cr4g42uug7h5g" path="res://styles/new_style_box_flat.tres" id="1_c75kr"]
 [ext_resource type="Script" uid="uid://dclr343nxr2wa" path="res://scripts/start_game.gd" id="1_tq2sd"]
+[ext_resource type="FontFile" uid="uid://cgbvqalpfog4q" path="res://assets/Pixel Game.otf" id="3_2aiwh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c75kr"]
 bg_color = Color(0.0361009, 0.036100917, 0.036100868, 1)
@@ -71,6 +72,7 @@ offset_top = 784.0
 offset_right = 1000.0
 offset_bottom = 947.0
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_2aiwh")
 theme_override_font_sizes/font_size = 48
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -100,7 +102,8 @@ offset_left = 212.0
 offset_top = 80.0
 offset_right = 372.0
 offset_bottom = 170.0
-theme_override_font_sizes/normal_font_size = 48
+theme_override_fonts/normal_font = ExtResource("3_2aiwh")
+theme_override_font_sizes/normal_font_size = 72
 theme_override_font_sizes/bold_font_size = 48
 theme_override_font_sizes/bold_italics_font_size = 48
 theme_override_font_sizes/italics_font_size = 48
@@ -114,7 +117,8 @@ offset_left = 576.0
 offset_top = 75.0
 offset_right = 769.0
 offset_bottom = 165.0
-theme_override_font_sizes/normal_font_size = 48
+theme_override_fonts/normal_font = ExtResource("3_2aiwh")
+theme_override_font_sizes/normal_font_size = 72
 theme_override_font_sizes/bold_font_size = 48
 theme_override_font_sizes/bold_italics_font_size = 48
 theme_override_font_sizes/italics_font_size = 48
@@ -154,7 +158,8 @@ vertical_alignment = 1
 offset_top = 316.0
 offset_right = 997.0
 offset_bottom = 684.0
-theme_override_font_sizes/font_size = 72
+theme_override_fonts/font = ExtResource("3_2aiwh")
+theme_override_font_sizes/font_size = 108
 horizontal_alignment = 1
 vertical_alignment = 1
 
