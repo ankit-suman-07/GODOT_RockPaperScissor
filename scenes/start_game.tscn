@@ -153,6 +153,14 @@ text = "ROCK x PAPER"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="WinnerLabel" type="Label" parent="." unique_id=93909507]
+offset_top = 317.0
+offset_right = 994.0
+offset_bottom = 685.0
+theme_override_font_sizes/font_size = 72
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Rock" to="." method="_on_rock_pressed"]
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Paper" to="." method="_on_paper_pressed"]
 [connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer/Scissor" to="." method="_on_scissor_pressed"]

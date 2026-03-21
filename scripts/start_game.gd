@@ -1,6 +1,17 @@
 extends Node2D
 
+@onready var round_selections = $RoundSelections
+@onready var player_score = $PlayerScoreValue
+@onready var computer_score = $ComputerScoreValue 
+@onready var computer_btn = $CenterContainer/HBoxContainer/VBoxContainer2/AI
+@onready var round_result = $"Winner Label"
+@onready var winner_label = $WinnerLabel
+
 const AI_OPTIONS = ["ROCK", "PAPER", "SCISSOR"]
+var round = 5
+var player_score_value = 0
+var computer_score_value = 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,30 +27,58 @@ func select_round_winner(player_selected):
 	var random = RandomNumberGenerator.new()
 	var ai_selected = AI_OPTIONS[random.rand_weighted(probabilities)]
 	
-	print("Player: ", player_selected, " AI: ", ai_selected)
-	print("-----------------------------------")
+	computer_btn.text = ai_selected
+	
+	round_selections.text = player_selected + "  vs  "   + ai_selected
 	
 	if ai_selected == player_selected:
-		print("DRAW")
+		round_result.text = "DRAW"
 	elif ai_selected == "ROCK":
 		if player_selected == "PAPER":
-			print("PLAYER WON")
+			round_result.text = "PLAYER WON"
+			player_score_value += 1
 		else:
-			print("COMPUTER WON")
+			round_result.text = "COMPUTER WON"
+			computer_score_value += 1
 	elif ai_selected == "PAPER":
 		if player_selected == "SCISSOR":
-			print("PLAYER WON")
+			round_result.text = "PLAYER WON"
+			player_score_value += 1
 		else:
-			print("COMPUTER WON")
-	else:
+			round_result.text = "COMPUTER WON"
+			computer_score_value += 1
+	elif ai_selected == "SCISSOR":
 		if player_selected == "ROCK":
-			print("PLAYER WON")
+			round_result.text = "PLAYER WON"
+			player_score_value += 1
 		else:
-			print("COMPUTER WON")
+			round_result.text = "COMPUTER WON"
+			computer_score_value += 1
+	
+	player_score.text = str(player_score_value)
+	computer_score.text = str(computer_score_value)
+	select_game_winner()
 	
 func select_game_winner():
-	pass
+	if round > 1:
+		round -= 1
+	else:
+		if player_score_value == computer_score_value:
+			winner_label.text = "DRAW"
+		elif player_score_value > computer_score_value:
+			winner_label.text = "PLAYER WON"
+		else:
+			winner_label.text = "COMPUTER WON"
+		
+		disable_all_buttons()
 
+func disable_all_buttons():
+	# Replace "HBoxContainer/VBoxContainer" with the actual path to your VBox
+	var container = $CenterContainer/HBoxContainer/VBoxContainer
+	
+	for child in container.get_children():
+		if child is Button:
+			child.disabled = true
 
 func _on_exit_btn_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
