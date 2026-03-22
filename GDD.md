@@ -30,7 +30,7 @@ A digital version of the classic Rock Paper Scissors game where the player compe
 - AI generates a move after player input
 - Outcome is evaluated based on standard rules
 - Scores are updated after each round
-- Game continues indefinitely or until reset
+- Each game is 5 rounds.
 
 ---
 
@@ -40,10 +40,8 @@ A digital version of the classic Rock Paper Scissors game where the player compe
 - Outcome evaluation system (win/lose/draw)
 - Score tracking (Player vs AI)
 - Round result display
+- Game result display
 - Restart / Reset game option
-- Sound effects for:
-  - Selection
-  - Win / Loss / Draw feedback
 - Basic menu navigation (Start / Exit)
 
 ---
@@ -84,7 +82,6 @@ A digital version of the classic Rock Paper Scissors game where the player compe
   - AI choice
   - Round result
 - Text-based or simple icon representation
-- Audio feedback enhances interaction
 
 ---
 
