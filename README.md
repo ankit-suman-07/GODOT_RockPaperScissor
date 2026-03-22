@@ -2,8 +2,8 @@
 
 
 
-### Game Design Document: [Click Here]()
-### Credits: [Click Here]()
+### Game Design Document: [Click Here](https://github.com/ankit-suman-07/GODOT_RockPaperScissor/blob/main/GDD.md)
+### Credits: [Click Here](https://github.com/ankit-suman-07/GODOT_RockPaperScissor/blob/main/Credits.md)
 
 ## 💻 Setup locally
 
